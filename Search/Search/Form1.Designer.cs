@@ -31,23 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tLPSearch = new System.Windows.Forms.TableLayoutPanel();
             this.pSearchTools = new System.Windows.Forms.Panel();
-            this.lName = new System.Windows.Forms.Label();
-            this.lSurname = new System.Windows.Forms.Label();
-            this.lGender = new System.Windows.Forms.Label();
-            this.lCountry = new System.Windows.Forms.Label();
-            this.lAge = new System.Windows.Forms.Label();
-            this.tBName = new System.Windows.Forms.TextBox();
-            this.tBSurname = new System.Windows.Forms.TextBox();
-            this.cBGender = new System.Windows.Forms.ComboBox();
-            this.cBCountry = new System.Windows.Forms.ComboBox();
-            this.mTBFromAge = new System.Windows.Forms.MaskedTextBox();
-            this.mTBToAge = new System.Windows.Forms.MaskedTextBox();
-            this.lFromAge = new System.Windows.Forms.Label();
-            this.lToAge = new System.Windows.Forms.Label();
+            this.lLogo = new System.Windows.Forms.Label();
             this.bSearch = new System.Windows.Forms.Button();
+            this.lToAge = new System.Windows.Forms.Label();
+            this.lFromAge = new System.Windows.Forms.Label();
+            this.mTBToAge = new System.Windows.Forms.MaskedTextBox();
+            this.mTBFromAge = new System.Windows.Forms.MaskedTextBox();
+            this.cBCountry = new System.Windows.Forms.ComboBox();
+            this.cBGender = new System.Windows.Forms.ComboBox();
+            this.tBSurname = new System.Windows.Forms.TextBox();
+            this.tBName = new System.Windows.Forms.TextBox();
+            this.lAge = new System.Windows.Forms.Label();
+            this.lCountry = new System.Windows.Forms.Label();
+            this.lGender = new System.Windows.Forms.Label();
+            this.lSurname = new System.Windows.Forms.Label();
+            this.lName = new System.Windows.Forms.Label();
             this.lBUsers = new System.Windows.Forms.ListBox();
             this.rTBFullInfo = new System.Windows.Forms.RichTextBox();
-            this.lLogo = new System.Windows.Forms.Label();
             this.tLPSearch.SuspendLayout();
             this.pSearchTools.SuspendLayout();
             this.SuspendLayout();
@@ -93,64 +93,70 @@
             this.pSearchTools.Size = new System.Drawing.Size(293, 369);
             this.pSearchTools.TabIndex = 0;
             // 
-            // lName
+            // lLogo
             // 
-            this.lName.AutoSize = true;
-            this.lName.Location = new System.Drawing.Point(3, 80);
-            this.lName.Name = "lName";
-            this.lName.Size = new System.Drawing.Size(35, 13);
-            this.lName.TabIndex = 0;
-            this.lName.Text = "Name";
+            this.lLogo.AutoSize = true;
+            this.lLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lLogo.Location = new System.Drawing.Point(78, 19);
+            this.lLogo.Name = "lLogo";
+            this.lLogo.Size = new System.Drawing.Size(141, 25);
+            this.lLogo.TabIndex = 14;
+            this.lLogo.Text = "Search People";
             // 
-            // lSurname
+            // bSearch
             // 
-            this.lSurname.AutoSize = true;
-            this.lSurname.Location = new System.Drawing.Point(3, 115);
-            this.lSurname.Name = "lSurname";
-            this.lSurname.Size = new System.Drawing.Size(49, 13);
-            this.lSurname.TabIndex = 1;
-            this.lSurname.Text = "Surname";
+            this.bSearch.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.bSearch.Image = ((System.Drawing.Image)(resources.GetObject("bSearch.Image")));
+            this.bSearch.Location = new System.Drawing.Point(199, 241);
+            this.bSearch.Name = "bSearch";
+            this.bSearch.Size = new System.Drawing.Size(36, 31);
+            this.bSearch.TabIndex = 13;
+            this.bSearch.UseVisualStyleBackColor = false;
+            this.bSearch.Click += new System.EventHandler(this.bSearch_Click);
             // 
-            // lGender
+            // lToAge
             // 
-            this.lGender.AutoSize = true;
-            this.lGender.Location = new System.Drawing.Point(3, 154);
-            this.lGender.Name = "lGender";
-            this.lGender.Size = new System.Drawing.Size(42, 13);
-            this.lGender.TabIndex = 2;
-            this.lGender.Text = "Gender";
+            this.lToAge.AutoSize = true;
+            this.lToAge.Location = new System.Drawing.Point(108, 227);
+            this.lToAge.Name = "lToAge";
+            this.lToAge.Size = new System.Drawing.Size(20, 13);
+            this.lToAge.TabIndex = 12;
+            this.lToAge.Text = "To";
             // 
-            // lCountry
+            // lFromAge
             // 
-            this.lCountry.AutoSize = true;
-            this.lCountry.Location = new System.Drawing.Point(3, 196);
-            this.lCountry.Name = "lCountry";
-            this.lCountry.Size = new System.Drawing.Size(43, 13);
-            this.lCountry.TabIndex = 3;
-            this.lCountry.Text = "Country";
+            this.lFromAge.AutoSize = true;
+            this.lFromAge.Location = new System.Drawing.Point(63, 227);
+            this.lFromAge.Name = "lFromAge";
+            this.lFromAge.Size = new System.Drawing.Size(30, 13);
+            this.lFromAge.TabIndex = 11;
+            this.lFromAge.Text = "From";
             // 
-            // lAge
+            // mTBToAge
             // 
-            this.lAge.AutoSize = true;
-            this.lAge.Location = new System.Drawing.Point(35, 246);
-            this.lAge.Name = "lAge";
-            this.lAge.Size = new System.Drawing.Size(26, 13);
-            this.lAge.TabIndex = 4;
-            this.lAge.Text = "Age";
+            this.mTBToAge.Location = new System.Drawing.Point(109, 243);
+            this.mTBToAge.Mask = "00";
+            this.mTBToAge.Name = "mTBToAge";
+            this.mTBToAge.Size = new System.Drawing.Size(19, 20);
+            this.mTBToAge.TabIndex = 10;
+            this.mTBToAge.ValidatingType = typeof(int);
             // 
-            // tBName
+            // mTBFromAge
             // 
-            this.tBName.Location = new System.Drawing.Point(62, 80);
-            this.tBName.Name = "tBName";
-            this.tBName.Size = new System.Drawing.Size(222, 20);
-            this.tBName.TabIndex = 5;
+            this.mTBFromAge.Location = new System.Drawing.Point(67, 243);
+            this.mTBFromAge.Mask = "00";
+            this.mTBFromAge.Name = "mTBFromAge";
+            this.mTBFromAge.Size = new System.Drawing.Size(20, 20);
+            this.mTBFromAge.TabIndex = 9;
+            this.mTBFromAge.ValidatingType = typeof(int);
             // 
-            // tBSurname
+            // cBCountry
             // 
-            this.tBSurname.Location = new System.Drawing.Point(62, 115);
-            this.tBSurname.Name = "tBSurname";
-            this.tBSurname.Size = new System.Drawing.Size(222, 20);
-            this.tBSurname.TabIndex = 6;
+            this.cBCountry.FormattingEnabled = true;
+            this.cBCountry.Location = new System.Drawing.Point(62, 193);
+            this.cBCountry.Name = "cBCountry";
+            this.cBCountry.Size = new System.Drawing.Size(121, 21);
+            this.cBCountry.TabIndex = 8;
             // 
             // cBGender
             // 
@@ -164,65 +170,68 @@
             this.cBGender.Size = new System.Drawing.Size(70, 21);
             this.cBGender.TabIndex = 7;
             // 
-            // cBCountry
+            // tBSurname
             // 
-            this.cBCountry.FormattingEnabled = true;
-            this.cBCountry.Location = new System.Drawing.Point(62, 193);
-            this.cBCountry.Name = "cBCountry";
-            this.cBCountry.Size = new System.Drawing.Size(121, 21);
-            this.cBCountry.TabIndex = 8;
+            this.tBSurname.Location = new System.Drawing.Point(62, 115);
+            this.tBSurname.Name = "tBSurname";
+            this.tBSurname.Size = new System.Drawing.Size(222, 20);
+            this.tBSurname.TabIndex = 6;
             // 
-            // mTBFromAge
+            // tBName
             // 
-            this.mTBFromAge.Location = new System.Drawing.Point(67, 243);
-            this.mTBFromAge.Mask = "00";
-            this.mTBFromAge.Name = "mTBFromAge";
-            this.mTBFromAge.Size = new System.Drawing.Size(20, 20);
-            this.mTBFromAge.TabIndex = 9;
-            this.mTBFromAge.ValidatingType = typeof(int);
+            this.tBName.Location = new System.Drawing.Point(62, 80);
+            this.tBName.Name = "tBName";
+            this.tBName.Size = new System.Drawing.Size(222, 20);
+            this.tBName.TabIndex = 5;
             // 
-            // mTBToAge
+            // lAge
             // 
-            this.mTBToAge.Location = new System.Drawing.Point(109, 243);
-            this.mTBToAge.Mask = "00";
-            this.mTBToAge.Name = "mTBToAge";
-            this.mTBToAge.Size = new System.Drawing.Size(19, 20);
-            this.mTBToAge.TabIndex = 10;
-            this.mTBToAge.ValidatingType = typeof(int);
+            this.lAge.AutoSize = true;
+            this.lAge.Location = new System.Drawing.Point(35, 246);
+            this.lAge.Name = "lAge";
+            this.lAge.Size = new System.Drawing.Size(26, 13);
+            this.lAge.TabIndex = 4;
+            this.lAge.Text = "Age";
             // 
-            // lFromAge
+            // lCountry
             // 
-            this.lFromAge.AutoSize = true;
-            this.lFromAge.Location = new System.Drawing.Point(63, 227);
-            this.lFromAge.Name = "lFromAge";
-            this.lFromAge.Size = new System.Drawing.Size(30, 13);
-            this.lFromAge.TabIndex = 11;
-            this.lFromAge.Text = "From";
+            this.lCountry.AutoSize = true;
+            this.lCountry.Location = new System.Drawing.Point(3, 196);
+            this.lCountry.Name = "lCountry";
+            this.lCountry.Size = new System.Drawing.Size(43, 13);
+            this.lCountry.TabIndex = 3;
+            this.lCountry.Text = "Country";
             // 
-            // lToAge
+            // lGender
             // 
-            this.lToAge.AutoSize = true;
-            this.lToAge.Location = new System.Drawing.Point(108, 227);
-            this.lToAge.Name = "lToAge";
-            this.lToAge.Size = new System.Drawing.Size(20, 13);
-            this.lToAge.TabIndex = 12;
-            this.lToAge.Text = "To";
+            this.lGender.AutoSize = true;
+            this.lGender.Location = new System.Drawing.Point(3, 154);
+            this.lGender.Name = "lGender";
+            this.lGender.Size = new System.Drawing.Size(42, 13);
+            this.lGender.TabIndex = 2;
+            this.lGender.Text = "Gender";
             // 
-            // bSearch
+            // lSurname
             // 
-            this.bSearch.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.bSearch.Image = ((System.Drawing.Image)(resources.GetObject("bSearch.Image")));
-            this.bSearch.Location = new System.Drawing.Point(199, 241);
-            this.bSearch.Name = "bSearch";
-            this.bSearch.Size = new System.Drawing.Size(36, 31);
-            this.bSearch.TabIndex = 13;
-            this.bSearch.UseVisualStyleBackColor = false;
-            this.bSearch.Click += new System.EventHandler(this.bSearch_Click);
+            this.lSurname.AutoSize = true;
+            this.lSurname.Location = new System.Drawing.Point(3, 115);
+            this.lSurname.Name = "lSurname";
+            this.lSurname.Size = new System.Drawing.Size(49, 13);
+            this.lSurname.TabIndex = 1;
+            this.lSurname.Text = "Surname";
+            // 
+            // lName
+            // 
+            this.lName.AutoSize = true;
+            this.lName.Location = new System.Drawing.Point(3, 80);
+            this.lName.Name = "lName";
+            this.lName.Size = new System.Drawing.Size(35, 13);
+            this.lName.TabIndex = 0;
+            this.lName.Text = "Name";
             // 
             // lBUsers
             // 
             this.lBUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lBUsers.Enabled = false;
             this.lBUsers.FormattingEnabled = true;
             this.lBUsers.Location = new System.Drawing.Point(3, 3);
             this.lBUsers.Name = "lBUsers";
@@ -238,16 +247,6 @@
             this.rTBFullInfo.Size = new System.Drawing.Size(387, 369);
             this.rTBFullInfo.TabIndex = 2;
             this.rTBFullInfo.Text = "";
-            // 
-            // lLogo
-            // 
-            this.lLogo.AutoSize = true;
-            this.lLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lLogo.Location = new System.Drawing.Point(78, 19);
-            this.lLogo.Name = "lLogo";
-            this.lLogo.Size = new System.Drawing.Size(141, 25);
-            this.lLogo.TabIndex = 14;
-            this.lLogo.Text = "Search People";
             // 
             // Form1
             // 

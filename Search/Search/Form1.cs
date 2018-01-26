@@ -50,17 +50,22 @@ namespace Search
         private void bSearch_Click(object sender, EventArgs e)
         {
             string name = tBName.Text;
+
             string surname = tBSurname.Text;
             string gender = cBGender.Text;
             string country = cBCountry.Text;
-            //int FromAge = int.Parse(mTBFromAge.Text);
-            //int ToAge = int.Parse(mTBToAge.Text);
+            int? FromAge = int.Parse(mTBFromAge.Text);
+            int? ToAge = int.Parse(mTBToAge.Text);
 
-            var result = users.FindAll(user => user.Name == name);
+
+            for (int? i = FromAge; i < ToAge; i++)
+            {
+                var result = users.FindAll(user => user?.Name == name && user?.Gender == gender && user?.Country == country);
+            }
 
             foreach (var item in result)
             {
-                rTBFullInfo.Text = item.Name;
+                lBUsers.Items.Add(item.Name);
             }
         }
     }
