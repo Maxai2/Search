@@ -17,7 +17,7 @@
             {
                 components.Dispose();
             }
-            base.Dispose(disposing);
+            base.Dispose(disposing); 
         }
 
         #region Windows Form Designer generated code
@@ -93,7 +93,7 @@
             this.tLPSearch.RowCount = 1;
             this.tLPSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tLPSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tLPSearch.Size = new System.Drawing.Size(845, 510);
+            this.tLPSearch.Size = new System.Drawing.Size(845, 520);
             this.tLPSearch.TabIndex = 0;
             // 
             // pSearchTools
@@ -116,7 +116,7 @@
             this.pSearchTools.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pSearchTools.Location = new System.Drawing.Point(549, 3);
             this.pSearchTools.Name = "pSearchTools";
-            this.pSearchTools.Size = new System.Drawing.Size(293, 504);
+            this.pSearchTools.Size = new System.Drawing.Size(293, 514);
             this.pSearchTools.TabIndex = 0;
             // 
             // lLogo
@@ -261,7 +261,7 @@
             this.lBUsers.FormattingEnabled = true;
             this.lBUsers.Location = new System.Drawing.Point(3, 3);
             this.lBUsers.Name = "lBUsers";
-            this.lBUsers.Size = new System.Drawing.Size(147, 504);
+            this.lBUsers.Size = new System.Drawing.Size(147, 514);
             this.lBUsers.TabIndex = 1;
             this.lBUsers.SelectedIndexChanged += new System.EventHandler(this.lBUsers_SelectedIndexChanged);
             // 
@@ -295,13 +295,13 @@
             this.pFullInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pFullInfo.Location = new System.Drawing.Point(156, 3);
             this.pFullInfo.Name = "pFullInfo";
-            this.pFullInfo.Size = new System.Drawing.Size(387, 504);
+            this.pFullInfo.Size = new System.Drawing.Size(387, 514);
             this.pFullInfo.TabIndex = 2;
             // 
             // tBBirthDateFull
             // 
             this.tBBirthDateFull.Enabled = false;
-            this.tBBirthDateFull.Location = new System.Drawing.Point(70, 478);
+            this.tBBirthDateFull.Location = new System.Drawing.Point(58, 488);
             this.tBBirthDateFull.Name = "tBBirthDateFull";
             this.tBBirthDateFull.Size = new System.Drawing.Size(100, 20);
             this.tBBirthDateFull.TabIndex = 24;
@@ -309,39 +309,39 @@
             // tBCompanyFull
             // 
             this.tBCompanyFull.Enabled = false;
-            this.tBCompanyFull.Location = new System.Drawing.Point(278, 436);
+            this.tBCompanyFull.Location = new System.Drawing.Point(232, 455);
             this.tBCompanyFull.Name = "tBCompanyFull";
-            this.tBCompanyFull.Size = new System.Drawing.Size(100, 20);
+            this.tBCompanyFull.Size = new System.Drawing.Size(133, 20);
             this.tBCompanyFull.TabIndex = 23;
             // 
             // tBLanguageFull
             // 
             this.tBLanguageFull.Enabled = false;
-            this.tBLanguageFull.Location = new System.Drawing.Point(237, 345);
+            this.tBLanguageFull.Location = new System.Drawing.Point(259, 350);
             this.tBLanguageFull.Name = "tBLanguageFull";
-            this.tBLanguageFull.Size = new System.Drawing.Size(109, 20);
+            this.tBLanguageFull.Size = new System.Drawing.Size(75, 20);
             this.tBLanguageFull.TabIndex = 22;
             // 
             // tBEmailFull
             // 
             this.tBEmailFull.Enabled = false;
-            this.tBEmailFull.Location = new System.Drawing.Point(246, 371);
+            this.tBEmailFull.Location = new System.Drawing.Point(59, 397);
             this.tBEmailFull.Name = "tBEmailFull";
-            this.tBEmailFull.Size = new System.Drawing.Size(100, 20);
+            this.tBEmailFull.Size = new System.Drawing.Size(251, 20);
             this.tBEmailFull.TabIndex = 21;
             // 
             // tBDepartmentFull
             // 
             this.tBDepartmentFull.Enabled = false;
-            this.tBDepartmentFull.Location = new System.Drawing.Point(278, 466);
+            this.tBDepartmentFull.Location = new System.Drawing.Point(240, 485);
             this.tBDepartmentFull.Name = "tBDepartmentFull";
-            this.tBDepartmentFull.Size = new System.Drawing.Size(100, 20);
+            this.tBDepartmentFull.Size = new System.Drawing.Size(125, 20);
             this.tBDepartmentFull.TabIndex = 20;
             // 
             // tBCountryFull
             // 
             this.tBCountryFull.Enabled = false;
-            this.tBCountryFull.Location = new System.Drawing.Point(70, 443);
+            this.tBCountryFull.Location = new System.Drawing.Point(58, 462);
             this.tBCountryFull.Name = "tBCountryFull";
             this.tBCountryFull.Size = new System.Drawing.Size(100, 20);
             this.tBCountryFull.TabIndex = 19;
@@ -349,31 +349,31 @@
             // tBJobFull
             // 
             this.tBJobFull.Enabled = false;
-            this.tBJobFull.Location = new System.Drawing.Point(278, 410);
+            this.tBJobFull.Location = new System.Drawing.Point(203, 432);
             this.tBJobFull.Name = "tBJobFull";
-            this.tBJobFull.Size = new System.Drawing.Size(100, 20);
+            this.tBJobFull.Size = new System.Drawing.Size(162, 20);
             this.tBJobFull.TabIndex = 18;
             // 
             // tBRaceFull
             // 
             this.tBRaceFull.Enabled = false;
-            this.tBRaceFull.Location = new System.Drawing.Point(70, 368);
+            this.tBRaceFull.Location = new System.Drawing.Point(59, 368);
             this.tBRaceFull.Name = "tBRaceFull";
-            this.tBRaceFull.Size = new System.Drawing.Size(82, 20);
+            this.tBRaceFull.Size = new System.Drawing.Size(121, 20);
             this.tBRaceFull.TabIndex = 17;
             // 
             // tBCityFull
             // 
             this.tBCityFull.Enabled = false;
-            this.tBCityFull.Location = new System.Drawing.Point(70, 413);
+            this.tBCityFull.Location = new System.Drawing.Point(58, 432);
             this.tBCityFull.Name = "tBCityFull";
-            this.tBCityFull.Size = new System.Drawing.Size(82, 20);
+            this.tBCityFull.Size = new System.Drawing.Size(100, 20);
             this.tBCityFull.TabIndex = 16;
             // 
             // tBGenderFull
             // 
             this.tBGenderFull.Enabled = false;
-            this.tBGenderFull.Location = new System.Drawing.Point(70, 342);
+            this.tBGenderFull.Location = new System.Drawing.Point(59, 342);
             this.tBGenderFull.Name = "tBGenderFull";
             this.tBGenderFull.Size = new System.Drawing.Size(43, 20);
             this.tBGenderFull.TabIndex = 15;
@@ -381,7 +381,7 @@
             // tBSurnameFull
             // 
             this.tBSurnameFull.Enabled = false;
-            this.tBSurnameFull.Location = new System.Drawing.Point(278, 314);
+            this.tBSurnameFull.Location = new System.Drawing.Point(259, 314);
             this.tBSurnameFull.Name = "tBSurnameFull";
             this.tBSurnameFull.Size = new System.Drawing.Size(100, 20);
             this.tBSurnameFull.TabIndex = 14;
@@ -389,7 +389,7 @@
             // tBNameFull
             // 
             this.tBNameFull.Enabled = false;
-            this.tBNameFull.Location = new System.Drawing.Point(74, 311);
+            this.tBNameFull.Location = new System.Drawing.Point(59, 311);
             this.tBNameFull.Name = "tBNameFull";
             this.tBNameFull.Size = new System.Drawing.Size(100, 20);
             this.tBNameFull.TabIndex = 13;
@@ -397,7 +397,7 @@
             // lBirthDateFull
             // 
             this.lBirthDateFull.AutoSize = true;
-            this.lBirthDateFull.Location = new System.Drawing.Point(11, 481);
+            this.lBirthDateFull.Location = new System.Drawing.Point(3, 491);
             this.lBirthDateFull.Name = "lBirthDateFull";
             this.lBirthDateFull.Size = new System.Drawing.Size(54, 13);
             this.lBirthDateFull.TabIndex = 12;
@@ -406,7 +406,7 @@
             // lLanguageFull
             // 
             this.lLanguageFull.AutoSize = true;
-            this.lLanguageFull.Location = new System.Drawing.Point(178, 348);
+            this.lLanguageFull.Location = new System.Drawing.Point(200, 353);
             this.lLanguageFull.Name = "lLanguageFull";
             this.lLanguageFull.Size = new System.Drawing.Size(55, 13);
             this.lLanguageFull.TabIndex = 11;
@@ -415,7 +415,7 @@
             // lCompanyFull
             // 
             this.lCompanyFull.AutoSize = true;
-            this.lCompanyFull.Location = new System.Drawing.Point(219, 439);
+            this.lCompanyFull.Location = new System.Drawing.Point(173, 458);
             this.lCompanyFull.Name = "lCompanyFull";
             this.lCompanyFull.Size = new System.Drawing.Size(51, 13);
             this.lCompanyFull.TabIndex = 10;
@@ -424,7 +424,7 @@
             // lDepartmentFull
             // 
             this.lDepartmentFull.AutoSize = true;
-            this.lDepartmentFull.Location = new System.Drawing.Point(211, 469);
+            this.lDepartmentFull.Location = new System.Drawing.Point(173, 488);
             this.lDepartmentFull.Name = "lDepartmentFull";
             this.lDepartmentFull.Size = new System.Drawing.Size(62, 13);
             this.lDepartmentFull.TabIndex = 9;
@@ -433,7 +433,7 @@
             // lCountryFull
             // 
             this.lCountryFull.AutoSize = true;
-            this.lCountryFull.Location = new System.Drawing.Point(2, 446);
+            this.lCountryFull.Location = new System.Drawing.Point(2, 465);
             this.lCountryFull.Name = "lCountryFull";
             this.lCountryFull.Size = new System.Drawing.Size(43, 13);
             this.lCountryFull.TabIndex = 8;
@@ -442,7 +442,7 @@
             // lJobFull
             // 
             this.lJobFull.AutoSize = true;
-            this.lJobFull.Location = new System.Drawing.Point(219, 413);
+            this.lJobFull.Location = new System.Drawing.Point(173, 432);
             this.lJobFull.Name = "lJobFull";
             this.lJobFull.Size = new System.Drawing.Size(24, 13);
             this.lJobFull.TabIndex = 7;
@@ -460,7 +460,7 @@
             // lCityFull
             // 
             this.lCityFull.AutoSize = true;
-            this.lCityFull.Location = new System.Drawing.Point(2, 416);
+            this.lCityFull.Location = new System.Drawing.Point(2, 435);
             this.lCityFull.Name = "lCityFull";
             this.lCityFull.Size = new System.Drawing.Size(24, 13);
             this.lCityFull.TabIndex = 5;
@@ -478,7 +478,7 @@
             // lEmailFull
             // 
             this.lEmailFull.AutoSize = true;
-            this.lEmailFull.Location = new System.Drawing.Point(187, 374);
+            this.lEmailFull.Location = new System.Drawing.Point(2, 400);
             this.lEmailFull.Name = "lEmailFull";
             this.lEmailFull.Size = new System.Drawing.Size(32, 13);
             this.lEmailFull.TabIndex = 3;
@@ -487,7 +487,7 @@
             // lSurnameFull
             // 
             this.lSurnameFull.AutoSize = true;
-            this.lSurnameFull.Location = new System.Drawing.Point(210, 317);
+            this.lSurnameFull.Location = new System.Drawing.Point(191, 317);
             this.lSurnameFull.Name = "lSurnameFull";
             this.lSurnameFull.Size = new System.Drawing.Size(49, 13);
             this.lSurnameFull.TabIndex = 2;
@@ -496,7 +496,7 @@
             // lNameFull
             // 
             this.lNameFull.AutoSize = true;
-            this.lNameFull.Location = new System.Drawing.Point(7, 314);
+            this.lNameFull.Location = new System.Drawing.Point(3, 314);
             this.lNameFull.Name = "lNameFull";
             this.lNameFull.Size = new System.Drawing.Size(35, 13);
             this.lNameFull.TabIndex = 1;
@@ -532,7 +532,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 510);
+            this.ClientSize = new System.Drawing.Size(845, 520);
             this.Controls.Add(this.tLPSearch);
             this.Name = "Form1";
             this.Text = "Form1";

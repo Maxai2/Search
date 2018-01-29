@@ -19,7 +19,7 @@ namespace Search
         List<User> users = new List<User>();
         List<User> tempUser = new List<User>();
 
-        public Form1()
+        public Form1() 
         {
             InitializeComponent();
 
@@ -53,54 +53,59 @@ namespace Search
             gMapFull.MinZoom = 5;
             gMapFull.MaxZoom = 100;
 
-            gMapFull.Zoom = 10;
+            gMapFull.Zoom = 15;
         }
 
         private void bSearch_Click(object sender, EventArgs e)
         {
+
             tempUser.Clear();
+            lBUsers.Items.Clear();
 
             DateTime year = new DateTime();
 
-            string name = "";
+            bool name = false;
 
             if (tBName.Text != "")
-                name = tBName.Text;
+                name = true;
 
-            string surname = "";
+            bool surname = false;
 
             if (tBSurname.Text != "")
-                surname = tBSurname.Text;
+                surname = true;
 
-            string gender = "";
+            bool gender = false;
 
             if (cBGender.Text != "")
-                gender = cBGender.Text;
+                gender = true;
 
-            string country = "";
+            bool country = false;
 
             if (cBCountry.Text != "")
-                country = cBCountry.Text;
+                country = true;
 
-            int FromAge = 0;
-            int fromYear = 0;
+            //int FromAge = 0;
+            //int fromYear = 0;
 
-            if (mTBFromAge.Text != "")
-            {
-                FromAge = int.Parse(mTBFromAge.Text);
-                fromYear = year.Year - FromAge;
-            }
+            //if (mTBFromAge.Text != "")
+            //{
+            //    FromAge = int.Parse(mTBFromAge.Text);
+            //    fromYear = year.Year - FromAge;
+            //}
 
-            int ToAge = 0;
-            int toYear = 0;
+            //int ToAge = 0;
+            //int toYear = 0;
 
-            if (mTBToAge.Text != "")
-            {
-                ToAge = int.Parse(mTBToAge.Text);
-                toYear = year.Year - ToAge;
-            }
+            //if (mTBToAge.Text != "")
+            //{
+            //    ToAge = int.Parse(mTBToAge.Text);
+            //    toYear = year.Year - ToAge;
+            //}
 
-            var result = users.FindAll(user => user?.Name == name && user?.LastName == surname && user?.Gender == gender && user?.Country == country && int.Parse(user?.BirthDate.Substring(6)) == fromYear);
+            var result = users.FindAll(user => gender == true ? user?.Gender == cBGender.Text : user?.Gender == user?.Gender &&
+                                               name == true ? user?.Name == tBName.Text : user?.Name == user?.Name &&
+                                               surname == true ? user?.LastName == tBSurname.Text : user?.LastName == user?.LastName &&
+                                               country == true ? user?.Country == cBCountry.Text : user?.Country == user?.Country);
 
             foreach (var item in result)
             {
@@ -111,8 +116,7 @@ namespace Search
 
         private void lBUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            gMapFull.DragButton = MouseButtons.Left;
-            gMapFull.MapProvider = GMapProviders.BingMap;
+            gMapFull.MapProvider = GMapProviders.YahooMap;
 
             string curItem = lBUsers.SelectedItem.ToString();
 
