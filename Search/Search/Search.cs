@@ -14,12 +14,12 @@ using System.Xml.Serialization;
 //-------------------------------------------------------------------------
 namespace Search
 {
-    public partial class Form1 : Form
+    public partial class FSearch : Form
     {
         List<User> users = new List<User>();
         List<User> tempUser = new List<User>();
 
-        public Form1() 
+        public FSearch() 
         {
             InitializeComponent();
 
@@ -50,7 +50,7 @@ namespace Search
 
             gMapFull.DragButton = MouseButtons.Left;
 
-            gMapFull.MinZoom = 5;
+            gMapFull.MinZoom = 1;
             gMapFull.MaxZoom = 100;
 
             gMapFull.Zoom = 15;
@@ -58,7 +58,6 @@ namespace Search
 
         private void bSearch_Click(object sender, EventArgs e)
         {
-
             tempUser.Clear();
             lBUsers.Items.Clear();
 
@@ -102,10 +101,18 @@ namespace Search
             //    toYear = year.Year - ToAge;
             //}
 
-            var result = users.FindAll(user => gender == true ? user?.Gender == cBGender.Text : user?.Gender == user?.Gender &&
+            var result = users.FindAll(user => 
                                                name == true ? user?.Name == tBName.Text : user?.Name == user?.Name &&
-                                               surname == true ? user?.LastName == tBSurname.Text : user?.LastName == user?.LastName &&
-                                               country == true ? user?.Country == cBCountry.Text : user?.Country == user?.Country);
+                                               surname == true ? user?.LastName == tBSurname.Text : user?.LastName == user?.LastName /*&&
+                                               gender == true ? user?.Gender == cBGender.Text : user?.Gender == user?.Gender &&
+                                               country == true ? user?.Country == cBCountry.Text : user?.Country == user?.Country*/
+                                               );
+
+            if (result.Count == 0)
+            {
+                MessageBox.Show("No user with matching search parameters");
+                return;
+            }
 
             foreach (var item in result)
             {
@@ -114,10 +121,15 @@ namespace Search
             }
         }
 
+        double lat;
+        double lont;
+
         private void lBUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            gMapFull.MapProvider = GMapProviders.YahooMap;
+            if (lBUsers.SelectedItem == null)
+                return;
 
+            gMapFull.MapProvider = GMapProviders.GoogleMap;
             string curItem = lBUsers.SelectedItem.ToString();
 
             int index = lBUsers.FindString(curItem);
@@ -139,6 +151,11 @@ namespace Search
             tBCompanyFull.Text = tempUser[index].Company;
             tBDepartmentFull.Text = tempUser[index].Department;
             tBBirthDateFull.Text = tempUser[index].BirthDate;
+        }
+
+        private void gMapFull_OnMapZoomChanged()
+        {
+            //gMapFull.Position = new GMap.NET.PointLatLng(lat, lont);
         }
     }
 }

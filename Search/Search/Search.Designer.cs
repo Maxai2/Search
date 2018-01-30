@@ -1,6 +1,6 @@
 ﻿namespace Search
 {
-    partial class Form1
+    partial class FSearch
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FSearch));
             this.tLPSearch = new System.Windows.Forms.TableLayoutPanel();
             this.pSearchTools = new System.Windows.Forms.Panel();
             this.lLogo = new System.Windows.Forms.Label();
@@ -83,7 +83,7 @@
             this.tLPSearch.ColumnCount = 3;
             this.tLPSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.14371F));
             this.tLPSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.85629F));
-            this.tLPSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 298F));
+            this.tLPSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 294F));
             this.tLPSearch.Controls.Add(this.pSearchTools, 2, 0);
             this.tLPSearch.Controls.Add(this.lBUsers, 0, 0);
             this.tLPSearch.Controls.Add(this.pFullInfo, 1, 0);
@@ -93,7 +93,7 @@
             this.tLPSearch.RowCount = 1;
             this.tLPSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tLPSearch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tLPSearch.Size = new System.Drawing.Size(845, 520);
+            this.tLPSearch.Size = new System.Drawing.Size(832, 520);
             this.tLPSearch.TabIndex = 0;
             // 
             // pSearchTools
@@ -114,9 +114,9 @@
             this.pSearchTools.Controls.Add(this.lSurname);
             this.pSearchTools.Controls.Add(this.lName);
             this.pSearchTools.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pSearchTools.Location = new System.Drawing.Point(549, 3);
+            this.pSearchTools.Location = new System.Drawing.Point(540, 3);
             this.pSearchTools.Name = "pSearchTools";
-            this.pSearchTools.Size = new System.Drawing.Size(293, 514);
+            this.pSearchTools.Size = new System.Drawing.Size(289, 514);
             this.pSearchTools.TabIndex = 0;
             // 
             // lLogo
@@ -261,8 +261,9 @@
             this.lBUsers.FormattingEnabled = true;
             this.lBUsers.Location = new System.Drawing.Point(3, 3);
             this.lBUsers.Name = "lBUsers";
-            this.lBUsers.Size = new System.Drawing.Size(147, 514);
+            this.lBUsers.Size = new System.Drawing.Size(145, 514);
             this.lBUsers.TabIndex = 1;
+            this.lBUsers.TabStop = false;
             this.lBUsers.SelectedIndexChanged += new System.EventHandler(this.lBUsers_SelectedIndexChanged);
             // 
             // pFullInfo
@@ -293,9 +294,9 @@
             this.pFullInfo.Controls.Add(this.lNameFull);
             this.pFullInfo.Controls.Add(this.gMapFull);
             this.pFullInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pFullInfo.Location = new System.Drawing.Point(156, 3);
+            this.pFullInfo.Location = new System.Drawing.Point(154, 3);
             this.pFullInfo.Name = "pFullInfo";
-            this.pFullInfo.Size = new System.Drawing.Size(387, 514);
+            this.pFullInfo.Size = new System.Drawing.Size(380, 514);
             this.pFullInfo.TabIndex = 2;
             // 
             // tBBirthDateFull
@@ -526,16 +527,19 @@
             this.gMapFull.ShowTileGridLines = false;
             this.gMapFull.Size = new System.Drawing.Size(381, 300);
             this.gMapFull.TabIndex = 0;
+            this.gMapFull.TabStop = false;
             this.gMapFull.Zoom = 0D;
+            this.gMapFull.OnMapZoomChanged += new GMap.NET.MapZoomChanged(this.gMapFull_OnMapZoomChanged);
             // 
-            // Form1
+            // FSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 520);
+            this.ClientSize = new System.Drawing.Size(832, 520);
             this.Controls.Add(this.tLPSearch);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FSearch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Search";
             this.tLPSearch.ResumeLayout(false);
             this.pSearchTools.ResumeLayout(false);
             this.pSearchTools.PerformLayout();
