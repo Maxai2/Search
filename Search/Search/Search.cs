@@ -61,64 +61,46 @@ namespace Search
             tempUser.Clear();
             lBUsers.Items.Clear();
 
-            DateTime year = new DateTime();
+            int FromAge = 0;
+            int FromYear = 2018;
 
-            bool name = false;
+            if (mTBFromAge.Text != "")
+            {
+                FromAge = int.Parse(mTBFromAge.Text);
+                FromYear = DateTime.Now.Year - FromAge;
+            }
+
+            int ToAge = 0;
+            int toYear = 1;
+
+            if (mTBToAge.Text != "")
+            {
+                ToAge = int.Parse(mTBToAge.Text);
+                toYear = DateTime.Now.Year - ToAge;
+            }
+
+            tempUser = users;
 
             if (tBName.Text != "")
-                name = true;
-
-            bool surname = false;
-
+                tempUser = tempUser.FindAll(user => user.Name == tBName.Text);
             if (tBSurname.Text != "")
-                surname = true;
-
-            bool gender = false;
-
-            if (cBGender.Text != "")
-                gender = true;
-
-            bool country = false;
-
+                tempUser = tempUser.FindAll(user => user.LastName == tBSurname.Text);
+            if (cBGender.Text != "" && cBGender.Text != "Any")
+                tempUser = tempUser.FindAll(user => user.Gender == cBGender.Text);
             if (cBCountry.Text != "")
-                country = true;
+                tempUser = tempUser.FindAll(user => user.Country == cBCountry.Text);
 
-            //int FromAge = 0;
-            //int fromYear = 0;
+            tempUser = tempUser.FindAll(user => Convert.ToDateTime(user.BirthDate).Year <= FromYear &&
+                                                Convert.ToDateTime(user.BirthDate).Year >= toYear);
 
-            //if (mTBFromAge.Text != "")
-            //{
-            //    FromAge = int.Parse(mTBFromAge.Text);
-            //    fromYear = year.Year - FromAge;
-            //}
-
-            //int ToAge = 0;
-            //int toYear = 0;
-
-            //if (mTBToAge.Text != "")
-            //{
-            //    ToAge = int.Parse(mTBToAge.Text);
-            //    toYear = year.Year - ToAge;
-            //}
-
-            var result = users.FindAll(user => 
-                                               name == true ? user?.Name == tBName.Text : user?.Name == user?.Name &&
-                                               surname == true ? user?.LastName == tBSurname.Text : user?.LastName == user?.LastName /*&&
-                                               gender == true ? user?.Gender == cBGender.Text : user?.Gender == user?.Gender &&
-                                               country == true ? user?.Country == cBCountry.Text : user?.Country == user?.Country*/
-                                               );
-
-            if (result.Count == 0)
+            if (tempUser.Count == 0)
             {
                 MessageBox.Show("No user with matching search parameters");
                 return;
             }
 
-            foreach (var item in result)
-            {
-                lBUsers.Items.Add($"{item.LastName} {item.Name}");
-                tempUser.Add(item);
-            }
+            for (int i = 0; i < tempUser.Count; i++)
+                lBUsers.Items.Add($"{i + 1} - {tempUser[i].LastName} {tempUser[i].Name}");
         }
 
         double lat;
